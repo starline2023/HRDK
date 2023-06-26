@@ -122,7 +122,7 @@ export default class Trade extends React.Component {
     // })
 
     let ObjTrade = new Object();
-    ObjTrade["loginid"] = GLOBALS.Client_LoginID;
+    ObjTrade["loginid"] = parseInt(GLOBALS.Client_LoginID);
     ObjTrade["Firmname"] = GLOBALS.ClientName;
     ObjTrade["ClientID"] = GLOBALS.ClientID;
     ObjTrade["Fromdate"] = StartDate;
@@ -198,7 +198,7 @@ export default class Trade extends React.Component {
     // })
 
     let ObjTrade = new Object();
-    ObjTrade["loginid"] = GLOBALS.Client_LoginID;
+    ObjTrade["loginid"] = parseInt(GLOBALS.Client_LoginID)
     ObjTrade["Firmname"] = GLOBALS.ClientName;
     ObjTrade["ClientID"] = GLOBALS.ClientID;
     ObjTrade["Fromdate"] = StartDate;
@@ -252,7 +252,7 @@ export default class Trade extends React.Component {
     // })
 
     let ObjTrade = new Object();
-    ObjTrade["loginid"] = GLOBALS.Client_LoginID;
+    ObjTrade["loginid"] = parseInt(GLOBALS.Client_LoginID)
     ObjTrade["Firmname"] = GLOBALS.ClientName;
     ObjTrade["ClientID"] = GLOBALS.ClientID;
     ObjTrade["Fromdate"] = StartDate;
@@ -1162,7 +1162,7 @@ class UpdateAndDeleteLimit extends React.Component {
     })
 
     let objDeleteOrder = new Object();
-    objDeleteOrder["LoginId"] = GLOBALS.Client_LoginID;
+    objDeleteOrder["LoginId"] = parseInt(GLOBALS.Client_LoginID)
     objDeleteOrder["DealNo"] = DealNo;
     objDeleteOrder["ClientId"] = GLOBALS.ClientID;
     objDeleteOrder["Token"] = GLOBALS.Token_User_Login;

@@ -428,10 +428,10 @@ class HomeActivity extends Component {
         </Modal>
         </ImageBackground>
 
-        <ClientRegistration
+        {/* <ClientRegistration
           visible={this.state.isModalVisible}
           dismiss={this.hideModal}
-        />
+        /> */}
 </SafeAreaView>
       </View>
     );

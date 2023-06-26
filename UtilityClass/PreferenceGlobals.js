@@ -4,6 +4,7 @@ export const isLogin_KEY = 'isLoginTerminal';
 export const ClientID = 'ClientID';
 export const USERID = 'UserLoginID';
 export const PASSWORD = 'Password';
+export const MOBILENO = 'MobileNo';
 export const UserLoginDetail = 'UserLoginDetail';
 
 export default  {
@@ -74,6 +75,23 @@ export default  {
         try {
             const item = JSON.stringify(value);
             return await AsyncStorage.setItem(PASSWORD, item);
+        } catch (e) {
+            throw e;
+        }
+    },
+    getMobileNO: async () => {
+        try {
+            let result = await AsyncStorage.getItem(MOBILENO);
+            return JSON.parse(result);
+        } 
+        catch (e) {
+            throw e;
+        } 
+},
+    setMobileNO: async (value) => {
+        try {
+            const item = JSON.stringify(value);
+            return await AsyncStorage.setItem(MOBILENO, item);
         } catch (e) {
             throw e;
         }

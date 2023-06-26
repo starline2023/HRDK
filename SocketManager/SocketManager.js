@@ -16,9 +16,9 @@ export function SocketManagerIOEmit() {
 
   let dataUser = GLOBALS.UserAccountDetail;
   GLOBALS.Token_User_Login = dataUser["Token"];
-  GLOBALS.Client_LoginID = dataUser["LoginId"];
+  GLOBALS.Client_LoginID = dataUser["Data"][0]["LoginId"];
 
-  socket.emit('End_Client', GLOBALS.ClientName + '_' + dataUser["LoginId"]);
+  socket.emit('End_Client', GLOBALS.ClientName + '_' + dataUser["Data"][0]["LoginId"]);
   socket.emit('room', GLOBALS.ClientName);
 }
 
@@ -36,9 +36,9 @@ export function SocketManagerIO() {
         let dataUser = JSON.parse(UserAccountDetail);
 
         GLOBALS.Token_User_Login = dataUser["Token"];
-        GLOBALS.Client_LoginID = dataUser["LoginId"];
+        GLOBALS.Client_LoginID = dataUser["Data"][0]["LoginId"];
 
-        socket.emit('End_Client', GLOBALS.ClientName + '_' + dataUser["LoginId"]);
+        socket.emit('End_Client', GLOBALS.ClientName + '_' + dataUser["Data"][0]["LoginId"]);
       }
     })
     socket.emit('room', GLOBALS.ClientName)

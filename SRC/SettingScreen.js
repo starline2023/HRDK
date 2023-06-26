@@ -609,7 +609,7 @@ export default class UpdatesScreen extends React.Component {
               </View>
 
               {/* Password */}
-              <View
+              {/* <View
                 style={[
                   {
                     justifyContent: "center",
@@ -695,7 +695,7 @@ export default class UpdatesScreen extends React.Component {
                     </Text>
                   </View>
                 </TouchableOpacity>
-              </View>
+              </View> */}
 
               {/* DELETE ACCOUNT */}
               {UserData.Firmname == "Starline" || UserData.Firmname == "starline" || UserData.Firmname == "SL" || UserData.Firmname == "sl" ? (

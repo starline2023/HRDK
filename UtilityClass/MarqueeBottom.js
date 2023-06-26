@@ -21,7 +21,7 @@ class MarqueeBottom extends Component {
       this.setState(prevState => ({
         key: prevState.key + 1, // change key value to force re-render
       }));
-    }, 8000); // re-render every 5 seconds
+    }, 20000); // re-render every 5 seconds
   }
 
   componentWillUnmount() {
